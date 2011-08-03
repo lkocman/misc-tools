@@ -1,0 +1,27 @@
+ <oaf_info>
+        <oaf_server iid="OAFIID:GNOME_NetbenefitsApplet_Factory"
+                    type="exe" location="/usr/bin/rsu.py">
+
+                <oaf_attribute name="repo_ids" type="stringv">
+                        <item value="IDL:Bonobo/GenericFactory:1.0"/>
+                        <item value="IDL:Bonobo/Unknown:1.0"/>
+                </oaf_attribute>
+                <oaf_attribute name="name" type="string" value="Netbenefits applet"/>
+                <oaf_attribute name="description" type="string" value="Prints price in CZK of RSUs specified in ~/.netbenefits"/>
+        </oaf_server>
+
+        <oaf_server iid="OAFIID:GNOME_Netbenefits"
+                    type="factory" location="OAFIID:GNOME_NetbenefitsApplet_Factory">
+
+                <oaf_attribute name="repo_ids" type="stringv">
+                        <item value="IDL:GNOME/Vertigo/PanelAppletShell:1.0"/>
+                        <item value="IDL:Bonobo/Control:1.0"/>
+                        <item value="IDL:Bonobo/Unknown:1.0"/>
+                </oaf_attribute>
+                <oaf_attribute name="name" type="string" value="Netbenefits applet"/>
+                <oaf_attribute name="description" type="string" value="Prints price in CZK of RSUs specified in ~/.netbenefits"/>
+                <oaf_attribute name="panel:category" type="string" value="Utility"/>
+                <oaf_attribute name="panel:icon" type="string" value="redhat-main-menu.png"/>
+        </oaf_server>
+</oaf_info>
+
